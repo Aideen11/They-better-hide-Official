@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
     public GameObject interactText;
     public GameObject door1;
 
+    public GameObject succesText;
+
     public Animator animator;
 
     bool isTrigger;
@@ -31,6 +33,7 @@ public class Door : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E)) // Vérifie si vous appuyez sur la touche "e"
                 {
                     animator.SetBool("isTrigger", true);
+                    succesText.SetActive(true);
                     //door.SetActive(false);
                 }
             }
@@ -51,5 +54,6 @@ public class Door : MonoBehaviour
         {
             interactText.gameObject.SetActive(false); // Masque le texte UI si vous ne regardez plus l'objet ou êtes trop loin
         }
+
     }
 }
